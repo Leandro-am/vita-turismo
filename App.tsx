@@ -11,7 +11,6 @@ export default function App() {
       <Header></Header>
       <Main></Main>
       <Footer></Footer>
-      <Text>eu so quero ver se vai dar certo</Text>
     </View>
   );
 }
