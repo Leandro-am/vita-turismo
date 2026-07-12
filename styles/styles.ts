@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native"
-import Header from "../components/Header"
 
 export const styles = StyleSheet.create({
     container: {
@@ -82,12 +81,30 @@ export const styles = StyleSheet.create({
         padding: 2,
 
     },
-
+    
     searchBarText: {
         width: "90%",
         paddingHorizontal: 5
     },
 
-    
+    cardFiltro: {
+        paddingHorizontal: 18,
+        paddingVertical: 10,
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: "#2F80ED",
+    },
+
+    cardFiltroSelecionado: {
+        backgroundColor: "#2F80ED",
+    },
+
+    cardFiltroTexto: {
+        color: "black",
+    },
+
+    cardFiltroTextoSelecionado: {
+        color: "white",
+    }
 
 })

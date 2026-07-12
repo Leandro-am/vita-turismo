@@ -1,6 +1,7 @@
 import { View, TextInput } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { styles } from '../styles/styles';
+import { Platform } from 'react-native';
 
 export default function SearchBar() {
   return (

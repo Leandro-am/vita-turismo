@@ -3,9 +3,15 @@ import {styles} from "../styles/styles"
 import { TouchableOpacity } from "react-native"
 import SearchBar from "./SearchBar"
 import { Ionicons } from "@expo/vector-icons"
+import CardFiltro from "./CardFiltro"
+import { useState } from "react"
+
+
+
 
 export default function Header() {
-  return (
+  const [filtroSelecionado, setFiltroSelecionado] = useState("Todos");
+  return ( 
     <View style={styles.header}>
         <div style={styles.headercontainer}>
           <div style={styles.headerLocalizacao}>
@@ -22,7 +28,11 @@ export default function Header() {
           </div>
         </div>
         <SearchBar></SearchBar>
-        
+        <View>
+          <CardFiltro titulo="Todos" selecionado={filtroSelecionado === "Todos"} onPress={() => setFiltroSelecionado("Todos")}></CardFiltro>
+          <CardFiltro titulo="Montanhas" selecionado={filtroSelecionado === "Montanhas"} onPress={() => setFiltroSelecionado("Montanhas")}></CardFiltro>
+        </View>
     </View>
   )
 }
+
