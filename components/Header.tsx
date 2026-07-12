@@ -1,22 +1,28 @@
-import { View, Text } from "react-native"
+import { View, Text, Image, TextInput } from "react-native"
 import {styles} from "../styles/styles"
 import { TouchableOpacity } from "react-native"
+import SearchBar from "./SearchBar"
+import { Ionicons } from "@expo/vector-icons"
 
 export default function Header() {
   return (
     <View style={styles.header}>
-        <div>
-          <div>
-            <Text>Brasil</Text>
-            <Text>Rio de janeiro</Text>
+        <div style={styles.headercontainer}>
+          <div style={styles.headerLocalizacao}>
+          <Ionicons name="location" size={20} color="black" />
+            <div style={styles.headerTextoLocalizacao}>
+              <Text><strong>Brasil</strong></Text>
+              <Text>Rio de janeiro</Text>
+            </div>
           </div>
-          <TouchableOpacity>aqui vai ficar um tsx do usuario</TouchableOpacity>
-          <Text>nao sei como fazer ainda mas vai ter um filtro aqui</Text>
+          <div>
+            <TouchableOpacity>
+            <Ionicons name="home" size={40} color="black" />
+            </TouchableOpacity>
+          </div>
         </div>
-
-        <div>
-          <label htmlFor="" aria-placeholder="Para onde vamos?">a label é esse texto aqui</label>
-        </div>
+        <SearchBar></SearchBar>
+        
     </View>
   )
 }

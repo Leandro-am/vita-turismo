@@ -9,8 +9,11 @@ export const styles = StyleSheet.create({
 
     header: {
         width: "100%",
-        height: 70,
-        backgroundColor: "blue"
+        height: "auto",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center"
 
     },
 
@@ -29,5 +32,62 @@ export const styles = StyleSheet.create({
         width: "100%",
         height: "20%",
         backgroundColor: "cyan"
-    }
+    },
+
+    headercontainer: {
+        display: "flex",
+        justifyContent: "space-between",
+        padding: 5,
+        width: "90%"
+    },
+
+    headerLocalizacao: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    
+    headerProfile: {
+        width: 50,
+        height: 50
+    },
+
+    headerLocalizarImagem: {
+        width: 15,
+        height: 15
+    },
+
+    headerTextoLocalizacao: {
+        display: "flex",
+        flexDirection: "column",
+        padding: 5
+
+    },
+
+    searchBar: {
+        width: "95%",
+        padding: 5
+    },
+
+    searchBarCorpo: {
+        flexDirection: "row",
+        borderStyle: "solid",
+        borderWidth: 2,
+        borderRadius: 10,
+        borderColor: "#DCD6AE",
+        flex: 1,
+        marginLeft: 8,
+        fontSize: 16,
+        color: '#000',
+        padding: 2,
+
+    },
+
+    searchBarText: {
+        width: "90%",
+        paddingHorizontal: 5
+    },
+
+    
+
 })
