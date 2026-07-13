@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar"
 import { Ionicons } from "@expo/vector-icons"
 import CardFiltro from "./CardFiltro"
 import { useState } from "react"
+import { ScrollView } from "react-native"
 
 
 
@@ -13,24 +14,30 @@ export default function Header() {
   const [filtroSelecionado, setFiltroSelecionado] = useState("Todos");
   return ( 
     <View style={styles.header}>
-        <div style={styles.headercontainer}>
-          <div style={styles.headerLocalizacao}>
+        <View style={styles.headercontainer}>
+          <View style={styles.headerLocalizacao}>
           <Ionicons name="location" size={20} color="black" />
-            <div style={styles.headerTextoLocalizacao}>
-              <Text><strong>Brasil</strong></Text>
+            <View style={styles.headerTextoLocalizacao}>
+              <Text>Brasil</Text>
               <Text>Rio de janeiro</Text>
-            </div>
-          </div>
-          <div>
+            </View>
+          </View>
+          <View>
             <TouchableOpacity>
             <Ionicons name="home" size={40} color="black" />
             </TouchableOpacity>
-          </div>
-        </div>
+          </View>
+        </View>
         <SearchBar></SearchBar>
-        <View>
-          <CardFiltro titulo="Todos" selecionado={filtroSelecionado === "Todos"} onPress={() => setFiltroSelecionado("Todos")}></CardFiltro>
-          <CardFiltro titulo="Montanhas" selecionado={filtroSelecionado === "Montanhas"} onPress={() => setFiltroSelecionado("Montanhas")}></CardFiltro>
+        <View style={styles.headerFiltroView}>
+          <ScrollView horizontal={true} style={ {width: "100%"} } showsHorizontalScrollIndicator={false} contentContainerStyle={{paddingHorizontal: 8, gap: 8}}>
+            <CardFiltro titulo="Todos" selecionado={filtroSelecionado === "Todos"} onPress={() => setFiltroSelecionado("Todos")}></CardFiltro>
+            <CardFiltro titulo="Montanhas" selecionado={filtroSelecionado === "Montanhas"} onPress={() => setFiltroSelecionado("Montanhas")}></CardFiltro>
+            <CardFiltro titulo="Radical" selecionado={filtroSelecionado === "Radical"} onPress={() => setFiltroSelecionado("Radical")}></CardFiltro>
+            <CardFiltro titulo="Cidade" selecionado={filtroSelecionado === "Cidade"} onPress={() => setFiltroSelecionado("Cidade")}></CardFiltro>
+            <CardFiltro titulo="Natureza" selecionado={filtroSelecionado === "Natureza"} onPress={() => setFiltroSelecionado("Natureza")}></CardFiltro>
+            <CardFiltro titulo="Aventura" selecionado={filtroSelecionado === "Aventura"} onPress={() => setFiltroSelecionado("Aventura")}></CardFiltro>
+          </ScrollView>
         </View>
     </View>
   )

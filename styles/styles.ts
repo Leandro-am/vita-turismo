@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     },
 
     header: {
-        width: "100%",
+        minWidth: "100%",
         height: "auto",
         display: "flex",
         flexDirection: "column",
@@ -18,7 +18,6 @@ export const styles = StyleSheet.create({
 
     headertext: {
         color: "white"
-
     },
 
     main: {
@@ -35,6 +34,7 @@ export const styles = StyleSheet.create({
 
     headercontainer: {
         display: "flex",
+        flexDirection: "row",
         justifyContent: "space-between",
         padding: 5,
         width: "90%"
@@ -42,6 +42,7 @@ export const styles = StyleSheet.create({
 
     headerLocalizacao: {
         display: "flex",
+        flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
     },
@@ -59,7 +60,6 @@ export const styles = StyleSheet.create({
     headerTextoLocalizacao: {
         display: "flex",
         flexDirection: "column",
-        padding: 5
 
     },
 
@@ -74,8 +74,6 @@ export const styles = StyleSheet.create({
         borderWidth: 2,
         borderRadius: 10,
         borderColor: "#DCD6AE",
-        flex: 1,
-        marginLeft: 8,
         fontSize: 16,
         color: '#000',
         padding: 2,
@@ -83,13 +81,11 @@ export const styles = StyleSheet.create({
     },
     
     searchBarText: {
-        width: "90%",
-        paddingHorizontal: 5
+        flex: 1,
     },
 
     cardFiltro: {
-        paddingHorizontal: 18,
-        paddingVertical: 10,
+        padding: 10,
         borderRadius: 20,
         borderWidth: 1,
         borderColor: "#2F80ED",
@@ -105,6 +101,10 @@ export const styles = StyleSheet.create({
 
     cardFiltroTextoSelecionado: {
         color: "white",
+    },
+
+    headerFiltroView: {
+        width: "100%",
     }
 
 })

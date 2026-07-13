@@ -7,9 +7,7 @@ import Main from './components/Main';
 export default function App() {
   return (
     <View style={styles.container}>
-      <View>
-        <Header></Header>
-      </View>
+      <Header></Header>
       <Main></Main>
     </View>
   );
