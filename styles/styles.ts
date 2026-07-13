@@ -1,12 +1,32 @@
 import { StyleSheet } from "react-native"
 
 export const styles = StyleSheet.create({
+
+    textheaderTituloFonte: {
+        fontFamily: "Space Grotesk",
+        fontWeight: "bold",
+        fontSize: 25
+    },
+
+    textHeaderDescricao: {
+        fontFamily: "Space Grotesk",
+        fontSize: 12,
+        color: "gray"
+    },
+
+    textCardMainTitulo: {
+        fontFamily: "Fraunces",
+        fontWeight: "bold"
+    },
+
     container: {
+        backgroundColor: "#DCEDEA",
         width: "100%",
         height: "100%"
     },
 
     header: {
+        backgroundColor: "#DCEDEA",
         minWidth: "100%",
         height: "auto",
         display: "flex",
@@ -21,9 +41,14 @@ export const styles = StyleSheet.create({
     },
 
     main: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        paddingHorizontal: 15,
+        paddingVertical: 5,
         width: "100%",
         height: "80%",
-        backgroundColor: "gray"
+        backgroundColor: "#DCEDEA"
     },
 
     footer: {
@@ -40,11 +65,16 @@ export const styles = StyleSheet.create({
         width: "90%"
     },
 
+    iconHeaderLocal: {
+        marginRight: 10
+    },
+
     headerLocalizacao: {
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
+        
     },
     
     headerProfile: {
@@ -87,12 +117,14 @@ export const styles = StyleSheet.create({
     cardFiltro: {
         padding: 10,
         borderRadius: 20,
-        borderWidth: 1,
-        borderColor: "#2F80ED",
+        borderWidth: 2,
+        borderColor: "#DCD6AE",
+        backgroundColor: "white"
     },
 
     cardFiltroSelecionado: {
-        backgroundColor: "#2F80ED",
+        borderColor: "#008080",
+        backgroundColor: "#008080",
     },
 
     cardFiltroTexto: {
@@ -104,7 +136,92 @@ export const styles = StyleSheet.create({
     },
 
     headerFiltroView: {
+        marginTop: 10,
+        marginBottom: 5,
         width: "100%",
-    }
+    },
 
+    headerFiltroContainer: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+
+    mainCard: {
+        borderStyle: "solid",
+        borderWidth: 2,
+        borderColor: "#B9CDBF",
+        borderRadius: 10,
+        width: "100%",
+        height: 270,
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "white",
+        justifyContent: "space-between",
+        padding: 3
+    },
+
+    Imagem: {
+        borderRadius: 10,
+        width: "100%",
+        height: 150
+    },
+
+    MainContainerCard: {
+        flex: 1,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+    },
+
+    TituloDoMainCard: {
+        fontSize: 20,
+        fontWeight: "bold"
+    },
+
+    descricaoDoMainCard: {
+        color: "gray",
+        fontSize: 14
+    },
+
+    containerTextoCardMain: {
+        padding: 5
+    },
+
+    ContainerComprar: {
+        justifyContent: "space-between",
+        paddingHorizontal: 5,
+        display: "flex",
+        flexDirection: "row",
+    },
+
+    flitroCardMain: {
+        borderRadius: 10,
+        backgroundColor: "#E4EBE1",
+        width: "40%",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+
+    botaoComprarCardMain: {
+        width: "30%",
+        padding: 5,
+        backgroundColor: "#045858",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 10
+    },
+
+    botaoCardTexto: {
+        color: "white"
+    },
+
+
+    tituloMain: {
+        fontWeight: "bold",
+        fontFamily: "fraunces",
+        fontSize: 20,
+        paddingVertical: 10
+    }
 })

@@ -16,21 +16,21 @@ export default function Header() {
     <View style={styles.header}>
         <View style={styles.headercontainer}>
           <View style={styles.headerLocalizacao}>
-          <Ionicons name="location" size={20} color="black" />
+          <Ionicons name="location" size={20} color="black" style={styles.iconHeaderLocal}/>
             <View style={styles.headerTextoLocalizacao}>
-              <Text>Brasil</Text>
-              <Text>Rio de janeiro</Text>
+              <Text style={styles.textheaderTituloFonte}>Brasil</Text>
+              <Text style={styles.textHeaderDescricao}>Rio de janeiro</Text>
             </View>
           </View>
           <View>
             <TouchableOpacity>
-            <Ionicons name="home" size={40} color="black" />
+            <Ionicons name="person-circle" size={50} color="black" />
             </TouchableOpacity>
           </View>
         </View>
         <SearchBar></SearchBar>
         <View style={styles.headerFiltroView}>
-          <ScrollView horizontal={true} style={ {width: "100%"} } showsHorizontalScrollIndicator={false} contentContainerStyle={{paddingHorizontal: 8, gap: 8}}>
+          <ScrollView horizontal={true} style={ [{width: "100%"}]} showsHorizontalScrollIndicator={false} contentContainerStyle={{paddingHorizontal: 8, gap: 8}}>
             <CardFiltro titulo="Todos" selecionado={filtroSelecionado === "Todos"} onPress={() => setFiltroSelecionado("Todos")}></CardFiltro>
             <CardFiltro titulo="Montanhas" selecionado={filtroSelecionado === "Montanhas"} onPress={() => setFiltroSelecionado("Montanhas")}></CardFiltro>
             <CardFiltro titulo="Radical" selecionado={filtroSelecionado === "Radical"} onPress={() => setFiltroSelecionado("Radical")}></CardFiltro>
