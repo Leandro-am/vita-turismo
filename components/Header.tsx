@@ -7,25 +7,21 @@ import CardFiltro from "./CardFiltro"
 import { useState } from "react"
 import { ScrollView } from "react-native"
 
-
-
-
 export default function Header() {
   const [filtroSelecionado, setFiltroSelecionado] = useState("Todos");
   return ( 
     <View style={styles.header}>
         <View style={styles.headercontainer}>
           <View style={styles.headerLocalizacao}>
-          <Ionicons name="location" size={20} color="black" style={styles.iconHeaderLocal}/>
+          <Ionicons name="location" size={20} color="#008080" style={styles.iconHeaderLocal}/>
             <View style={styles.headerTextoLocalizacao}>
               <Text style={styles.textheaderTituloFonte}>Brasil</Text>
               <Text style={styles.textHeaderDescricao}>Rio de janeiro</Text>
             </View>
           </View>
-          <View>
-            <TouchableOpacity>
-            <Ionicons name="person-circle" size={50} color="black" />
-            </TouchableOpacity>
+          <View style={styles.headerVitaTurismo}>
+            <Ionicons name="earth-outline" size={22} color={"#008080"}></Ionicons>
+            <Text style={styles.caraComoÉBomAcabarUmProjetoEFicarSatisfeito}>Vita Turismo</Text>
           </View>
         </View>
         <SearchBar></SearchBar>

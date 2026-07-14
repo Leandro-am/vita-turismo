@@ -169,7 +169,7 @@ export const styles = StyleSheet.create({
     },
 
     MainContainerCard: {
-        flex: 1,
+        height: 400,
         display: "flex",
         flexDirection: "column",
         alignItems: "center"
@@ -223,5 +223,19 @@ export const styles = StyleSheet.create({
         fontFamily: "fraunces",
         fontSize: 20,
         paddingVertical: 10
+    },
+
+    headerVitaTurismo: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+
+    caraComoÉBomAcabarUmProjetoEFicarSatisfeito: {
+        color: "#008080",
+        fontFamily: "fraunces",
+        fontWeight: "bold",
+        fontSize: 22,
     }
 })
